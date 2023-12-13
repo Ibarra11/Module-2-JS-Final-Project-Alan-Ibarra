@@ -1,0 +1,915 @@
+[
+  {
+    "isbn": "0613911881",
+    "title": "JavaScript",
+    "subTitle": "The Definitive Guide",
+    "author": ["David Flanagan", "James Guérin"],
+    "rating": 4.2727275,
+    "copies": 34,
+    "cover": "https://covers.openlibrary.org/b/olid/OL739825M-M.jpg",
+    "publishYear": 1996
+  },
+  {
+    "isbn": "1118026691",
+    "title": "Professional JavaScript for Web developers",
+    "author": ["Nicholas C. Zakas"],
+    "rating": 0,
+    "copies": 30,
+    "cover": "https://covers.openlibrary.org/b/olid/OL8051731M-M.jpg",
+    "publishYear": 2005
+  },
+  {
+    "isbn": "9780470051511",
+    "title": "Beginning JavaScript",
+    "author": ["Paul Wilton"],
+    "rating": 0,
+    "copies": 22,
+    "cover": "https://covers.openlibrary.org/b/olid/OL3963471M-M.jpg",
+    "publishYear": 2000
+  },
+  {
+    "isbn": "9780764568626",
+    "title": "JavaScript bible",
+    "author": ["Danny Goodman"],
+    "rating": 0,
+    "copies": 26,
+    "cover": "https://covers.openlibrary.org/b/olid/OL1019887M-M.jpg",
+    "publishYear": 1996
+  },
+  {
+    "isbn": "9782841771059",
+    "title": "JavaScript",
+    "subTitle": "Pocket Reference",
+    "author": ["David Flanagan"],
+    "rating": 0,
+    "copies": 22,
+    "cover": "https://covers.openlibrary.org/b/olid/OL8667289M-M.jpg",
+    "publishYear": 1998
+  },
+  {
+    "isbn": "9789352134205",
+    "title": "You Don't Know JS",
+    "author": ["Kyle Simpson"],
+    "rating": 4,
+    "copies": 24,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26414388M-M.jpg",
+    "publishYear": 2014
+  },
+  {
+    "isbn": "1000635090",
+    "title": "JavaScript for Sound Artists",
+    "author": ["William Turner", "Steve Leonard"],
+    "rating": 0,
+    "copies": 22,
+    "cover": "https://covers.openlibrary.org/b/olid/OL28887290M-M.jpg",
+    "publishYear": 2017
+  },
+  {
+    "isbn": "0735625913",
+    "title": "Developing service-oriented Ajax applications on the Microsoft platform",
+    "author": ["Daniel Larson"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL23953619M-M.jpg",
+    "publishYear": 2008
+  },
+  {
+    "isbn": "9780764528262",
+    "title": "JavaScript for dummies",
+    "author": ["Emily A. Vander Veer"],
+    "rating": 0,
+    "copies": 14,
+    "cover": "https://covers.openlibrary.org/b/olid/OL1019794M-M.jpg",
+    "publishYear": 1996
+  },
+  {
+    "isbn": "1394193246",
+    "title": "Professional JavaScript for Web Developers",
+    "author": ["Matt Frisbie"],
+    "rating": 0,
+    "copies": 16,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26833236M-M.jpg",
+    "publishYear": 2019
+  },
+  {
+    "isbn": "1647862205",
+    "title": "You Don't Know JS Yet",
+    "subTitle": "Get Started - 2nd Edition",
+    "author": ["Kyle Simpson"],
+    "rating": 0,
+    "copies": 12,
+    "cover": "https://covers.openlibrary.org/b/olid/OL36647106M-M.jpg",
+    "publishYear": 2019
+  },
+  {
+    "isbn": "1449319262",
+    "title": "Learning PHP, MySQL & JavaScript",
+    "author": ["Robin Nixon"],
+    "rating": 4,
+    "copies": 18,
+    "cover": "https://covers.openlibrary.org/b/olid/OL23227302M-M.jpg",
+    "publishYear": 2009
+  },
+  {
+    "isbn": "9780596806132",
+    "title": "JavaScript Cookbook",
+    "subTitle": "Programming the Web",
+    "author": ["Shelley Powers"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26837784M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9781118871652",
+    "title": "JavaScript and jQuery",
+    "subTitle": "Interactive Front-End Web Development",
+    "author": ["Jon Duckett"],
+    "rating": 4.1666665,
+    "copies": 11,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25917962M-M.jpg",
+    "publishYear": 2014
+  },
+  {
+    "isbn": "1593279507",
+    "title": "Eloquent Javascript",
+    "author": ["Marijn Haverbeke"],
+    "rating": 4.4444447,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24411757M-M.jpg",
+    "publishYear": 2009
+  },
+  {
+    "isbn": "0071632956",
+    "title": "JavaScript",
+    "subTitle": "a beginner's guide",
+    "author": ["John Pollock"],
+    "rating": 4,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL3965869M-M.jpg",
+    "publishYear": 2001
+  },
+  {
+    "isbn": "9780136204350",
+    "title": "JavaScript Absolute Beginner's Guide",
+    "author": ["Kirupa Chinnathambi"],
+    "rating": 0,
+    "copies": 12,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26833954M-M.jpg",
+    "publishYear": 2016
+  },
+  {
+    "isbn": "2744023280",
+    "title": "JavaScript",
+    "author": ["Douglas Crockford"],
+    "rating": 4,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL23093977M-M.jpg",
+    "publishYear": 2008
+  },
+  {
+    "isbn": "9780470109496",
+    "title": "Professional Ajax",
+    "author": ["Nicholas C. Zakas", "Jeremy McPeak"],
+    "rating": 0,
+    "copies": 14,
+    "cover": "https://covers.openlibrary.org/b/olid/OL3417952M-M.jpg",
+    "publishYear": 2006
+  },
+  {
+    "isbn": "9780613912143",
+    "title": "Dynamic HTML",
+    "author": ["Danny Goodman"],
+    "rating": 4,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24768065M-M.jpg",
+    "publishYear": 1998
+  },
+  {
+    "isbn": "9780201696486",
+    "title": "JavaScript for the World Wide Web",
+    "author": ["Tom Negrino"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL3969883M-M.jpg",
+    "publishYear": 1998
+  },
+  {
+    "isbn": "9781423901501",
+    "title": "JavaScript",
+    "author": ["Don Gosselin"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL22472602M-M.jpg",
+    "publishYear": 2002
+  },
+  {
+    "isbn": "9780137669653",
+    "title": "Core Java 1.1",
+    "author": ["Cay S. Horstmann", "Gary Cornell"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24740442M-M.jpg",
+    "publishYear": 1997
+  },
+  {
+    "isbn": "1449320465",
+    "title": "Javascript and Jquery",
+    "author": ["David Sawyer McFarland"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2011
+  },
+  {
+    "isbn": "9781306816151",
+    "title": "Ajax Hacks",
+    "author": ["Bruce W. Perry"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL17928396M-M.jpg",
+    "publishYear": 2006
+  },
+  {
+    "isbn": "1449371159",
+    "title": "Beautiful Javascript Leading Programmers Explain How They Think",
+    "author": ["Anton Kovalyov", "Anton Kovalyov"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26085317M-M.jpg",
+    "publishYear": 2014
+  },
+  {
+    "isbn": "0470584459",
+    "title": "jQuery for dummies",
+    "author": ["Lynn Beighley"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25304788M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9781118903742",
+    "title": "Beginning JavaScript",
+    "author": ["Jeremy McPeak"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26837655M-M.jpg",
+    "publishYear": 2011
+  },
+  {
+    "isbn": "1351120344",
+    "title": "Smart Computing with Opensource Platforms",
+    "author": ["Amartya Mukherjee", "Nilanjan Dey"],
+    "rating": 0,
+    "copies": 12,
+    "cover": "https://covers.openlibrary.org/b/olid/OL33737051M-M.jpg",
+    "publishYear": 2019
+  },
+  {
+    "isbn": "0735667314",
+    "title": "JavaScript step by step",
+    "author": ["Steve Suehring"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2008
+  },
+  {
+    "isbn": "1119367972",
+    "title": "JavaScript",
+    "author": ["T. J. Crowder"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2019
+  },
+  {
+    "isbn": "9781118524404",
+    "title": "JavaScript Programming",
+    "author": ["Jon Raasch"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2013
+  },
+  {
+    "isbn": "1491950277",
+    "title": "Programming JavaScript Applications",
+    "author": ["Eric Elliott"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2014
+  },
+  {
+    "isbn": "1498731465",
+    "title": "Start programming using HTML, CSS, and JavaScript",
+    "author": ["Iztok Fajfar"],
+    "rating": 4,
+    "copies": 12,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9780596004880",
+    "title": "VBScript in a nutshell",
+    "author": ["Paul Lomax", "Ron Petrusha", "Matt Childs"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL17920873M-M.jpg",
+    "publishYear": 2000
+  },
+  {
+    "isbn": "1306811503",
+    "title": "Javascript Testing With Jasmine",
+    "author": ["Evan Hahn"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26184454M-M.jpg",
+    "publishYear": 2013
+  },
+  {
+    "isbn": "9781449360795",
+    "title": "Functional JavaScript",
+    "author": ["Michael Fogus"],
+    "rating": 4,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25447508M-M.jpg",
+    "publishYear": 2013
+  },
+  {
+    "isbn": "1593271069",
+    "title": "The Book of JavaScript",
+    "author": ["Dave Thau"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL8706046M-M.jpg",
+    "publishYear": 2000
+  },
+  {
+    "isbn": "9781282188488",
+    "title": "Beginning JavaScript and CSS development with jQuery",
+    "author": ["Richard York"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL23059507M-M.jpg",
+    "publishYear": 2009
+  },
+  {
+    "isbn": "1449388744",
+    "title": "High Performance JavaScript",
+    "author": ["Nicholas C. Zakas"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25431305M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9781449327682",
+    "title": "Maintainable JavaScript",
+    "author": ["Nicholas C. Zakas"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25435629M-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "9780201758757",
+    "title": "JavaScript",
+    "author": ["Elmar Dellwig", "Ingo Dellwig"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL3954272M-M.jpg",
+    "publishYear": 2001
+  },
+  {
+    "isbn": "9780137001316",
+    "title": "JavaScript for programmers",
+    "author": ["Paul J. Deitel"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL23606970M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "1119056071",
+    "title": "Coding with JavaScript for dummies",
+    "author": ["Chris Minnick"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL27181407M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "1136023224",
+    "title": "HTML5 JavaScript Model",
+    "author": ["Matthew David"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "0367680637",
+    "title": "Javascript for R",
+    "author": ["John Coene"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2021
+  },
+  {
+    "isbn": "9785845901026",
+    "title": "Sams teach yourself JavaScript 1.3 in 24 hours",
+    "author": ["Michael G. Moncur"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL397666M-M.jpg",
+    "publishYear": 1999
+  },
+  {
+    "isbn": "9780134546544",
+    "title": "Learning React",
+    "author": ["Kirupa Chinnathambi"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26836888M-M.jpg",
+    "publishYear": 2016
+  },
+  {
+    "isbn": "0470612878",
+    "title": "Beginning HTML, XHTML, CSS, and JavaScript",
+    "author": ["Jon Duckett"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24323691M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9780132104272",
+    "title": "JavaScript and Ajax for the Web",
+    "author": ["Tom Negrino", "Dori Smith"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL17157963M-M.jpg",
+    "publishYear": 2006
+  },
+  {
+    "isbn": "9781449383268",
+    "title": "Building Android apps with HTML, CSS, and JavaScript",
+    "author": ["Jonathan Stark"],
+    "rating": 0,
+    "copies": 12,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25284173M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9780768655643",
+    "title": "JavaScript goodies",
+    "author": ["Joe Burns"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL53821M-M.jpg",
+    "publishYear": 1999
+  },
+  {
+    "isbn": "1118081609",
+    "title": "JavaScript Programmer's Reference",
+    "author": ["Alexei White"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24302958M-M.jpg",
+    "publishYear": 2009
+  },
+  {
+    "isbn": "9781786302045",
+    "title": "JavaScript and Open Data",
+    "author": ["Robert Jeansoulin"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2018
+  },
+  {
+    "isbn": "047036341X",
+    "title": "Beginning PHP5, Apache, and MySQL Web development",
+    "author": ["Elizabeth Naramore"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL21112596M-M.jpg",
+    "publishYear": 2005
+  },
+  {
+    "isbn": "9781491929483",
+    "title": "Introduction to JavaScript Object Notation",
+    "author": ["Lindsay Bassett"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "1449344445",
+    "title": "JavaScript Enlightenment",
+    "author": ["Cody Lindley"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "9781491914861",
+    "title": "Learning JavaScript",
+    "author": ["Ethan Brown"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2016
+  },
+  {
+    "isbn": "9781098139872",
+    "title": "Learning JavaScript Design Patterns",
+    "author": ["Addy Osmani"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL46075169M-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "1784399434",
+    "title": "Mastering Ext JS",
+    "author": ["Loiane Groner"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26838547M-M.jpg",
+    "publishYear": 2013
+  },
+  {
+    "isbn": "9780130478917",
+    "title": "Advanced JavaScript",
+    "author": ["Dan Livingston"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL9286742M-M.jpg",
+    "publishYear": 2002
+  },
+  {
+    "isbn": "9780672337383",
+    "title": "Sams Teach Yourself JavaScript in 24 Hours",
+    "author": ["Phil Ballard"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25771862M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9780132715508",
+    "title": "Sams Teach Yourself JavaScript in 24 Hours",
+    "author": ["Michael G. Moncur"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL7668732M-M.jpg",
+    "publishYear": 2006
+  },
+  {
+    "isbn": "156592360X",
+    "title": "Designing with Javascript",
+    "author": ["Nick Heinle", "Bill Pena"],
+    "rating": 4,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL3582773M-M.jpg",
+    "publishYear": 1997
+  },
+  {
+    "isbn": "1118227549",
+    "title": "Professional NodeJs",
+    "author": ["Pedro Teixeira"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26140744M-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "9781282989832",
+    "title": "Smashing jQuery",
+    "author": ["Jake Rutter"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24881892M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "1449313663",
+    "title": "Supercharged JavaScript graphics",
+    "author": ["Raffaele Cecco"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25224458M-M.jpg",
+    "publishYear": 2011
+  },
+  {
+    "isbn": "1138105325",
+    "title": "Revival",
+    "author": ["Paul W. Ross"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2018
+  },
+  {
+    "isbn": "1280674059",
+    "title": "Professional Jquery",
+    "author": ["Rob Larsen"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25995496M-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "1119209439",
+    "title": "Web Development with jQuery",
+    "author": ["Richard York"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL27518168M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9781118832080",
+    "title": "Professional AngularJS",
+    "author": ["Valeri Karpov"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL27188588M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9781118213704",
+    "title": "Php Mysql Javascript Html5 Allinone For Dummies",
+    "author": ["Steve Suehring"],
+    "rating": 0,
+    "copies": 10,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26182293M-M.jpg",
+    "publishYear": 2013
+  },
+  {
+    "isbn": "1491929006",
+    "title": "Learning React Native",
+    "author": ["Bonnie Eisenman"],
+    "rating": 3.5,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9780471219767",
+    "title": "Making Use of JavaScript",
+    "author": ["Shweta Bhasin"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL7613560M-M.jpg",
+    "publishYear": 2002
+  },
+  {
+    "isbn": "9780132350082",
+    "title": "Ajax Construction Kit",
+    "author": ["Michael Morrison"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL9294447M-M.jpg",
+    "publishYear": 2007
+  },
+  {
+    "isbn": "1575210843",
+    "title": "JavaScript 1.1 developer's guide",
+    "author": ["Arman Danesh"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL1014955M-M.jpg",
+    "publishYear": 1996
+  },
+  {
+    "isbn": "9781783614189",
+    "title": "Coding Javascript Basics",
+    "author": ["Adam Crute"],
+    "rating": 5,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL28567035M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9780538468138",
+    "title": "Javascript",
+    "author": ["Don Gosselin"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL27065420M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "1638353573",
+    "title": "Secrets of the JavaScript Ninja",
+    "author": ["John Resig", "Bear Bibeault", "Josip Maras"],
+    "rating": 5,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26836111M-M.jpg",
+    "publishYear": 2016
+  },
+  {
+    "isbn": "0764548557",
+    "title": "JavaScript Examples Bible",
+    "author": ["Danny Goodman"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL8042734M-M.jpg",
+    "publishYear": 2001
+  },
+  {
+    "isbn": "1430261064",
+    "title": "JavaScript recipes",
+    "subTitle": "a problem-solution approach",
+    "author": ["Russ Ferguson"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26402300M-M.jpg",
+    "publishYear": 2016
+  },
+  {
+    "isbn": "9781118016404",
+    "title": "Javascript 24-hour Trainer",
+    "author": ["Jeremy McPeak"],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25959108M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "3827258189",
+    "title": "JavaScript",
+    "author": ["Elmar Dellwig"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25571311M-M.jpg",
+    "publishYear": 2001
+  },
+  {
+    "isbn": "1118084888",
+    "title": "JavaScript for dummies quick reference",
+    "author": ["Emily A. Vander Veer"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL707986M-M.jpg",
+    "publishYear": 1997
+  },
+  {
+    "isbn": "9781449302771",
+    "title": "jQuery",
+    "subTitle": "Pocket Reference",
+    "author": ["David Flanagan"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25431316M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9781119119883",
+    "title": "JavaScript For Kids For Dummies",
+    "author": ["Chris Minnick", "Eva Holland"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL28110994M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "1449369278",
+    "title": "WebSocket",
+    "author": ["Andrew Lombardi"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL28540903M-M.jpg",
+    "publishYear": 2015
+  },
+  {
+    "isbn": "9781118261422",
+    "title": "HTML5 ELearning Kit for Dummies",
+    "author": ["Frank Boumphrey"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/undefined-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "9781642000047",
+    "title": "JavaScript Succinctly",
+    "author": ["Cody Lindley"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL33363208M-M.jpg",
+    "publishYear": 2014
+  },
+  {
+    "isbn": "0672321416",
+    "title": "Pure JavaScript",
+    "author": [
+      "R. Allen Wyke",
+      "Charlton Ting",
+      "Jason D. Gilliam",
+      "Sean Michaels"
+    ],
+    "rating": 0,
+    "copies": 4,
+    "cover": "https://covers.openlibrary.org/b/olid/OL7668332M-M.jpg",
+    "publishYear": 2001
+  },
+  {
+    "isbn": "9781282689503",
+    "title": "Professional XMPP programming with JavaScript and jQuery",
+    "author": ["Jack Moffitt"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25272624M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "9781491914915",
+    "title": "Learning JavaScript",
+    "author": ["Ethan Brown"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25944232M-M.jpg",
+    "publishYear": 2007
+  },
+  {
+    "isbn": "9781449373955",
+    "title": "Data Structures And Algorithms With Javascript",
+    "author": ["Michael McMillan"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26112945M-M.jpg",
+    "publishYear": 2014
+  },
+  {
+    "isbn": "9781849515146",
+    "title": "Node Web development",
+    "author": ["David Herron"],
+    "rating": 0,
+    "copies": 6,
+    "cover": "https://covers.openlibrary.org/b/olid/OL25561342M-M.jpg",
+    "publishYear": 2011
+  },
+  {
+    "isbn": "9780619015558",
+    "title": "JavaScript - Comprehensive",
+    "author": ["Gosselin"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL7606628M-M.jpg",
+    "publishYear": 2000
+  },
+  {
+    "isbn": "1449328555",
+    "title": "Developing BackboneJs Applications",
+    "author": ["Addy Osmani"],
+    "rating": 4,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL26108360M-M.jpg",
+    "publishYear": 2012
+  },
+  {
+    "isbn": "9780137084753",
+    "title": "JavaScript by example",
+    "author": ["Ellie Quigley"],
+    "rating": 0,
+    "copies": 8,
+    "cover": "https://covers.openlibrary.org/b/olid/OL24422349M-M.jpg",
+    "publishYear": 2010
+  },
+  {
+    "isbn": "0130130567",
+    "title": "Essential Java script for Web professionals",
+    "author": ["Dan Barrett", "Dan Livingston", "Micah Brown"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL7329936M-M.jpg",
+    "publishYear": 1999
+  },
+  {
+    "isbn": "007913694X",
+    "title": "Server Scripts With Visual Javascript (Hands-on Web Development)",
+    "author": ["Dan Rahmel"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL7310246M-M.jpg",
+    "publishYear": 1998
+  },
+  {
+    "isbn": "0596527748",
+    "title": "Head first JavaScript",
+    "author": ["Michael Morrison"],
+    "rating": 0,
+    "copies": 2,
+    "cover": "https://covers.openlibrary.org/b/olid/OL18590894M-M.jpg",
+    "publishYear": 2007
+  }
+]

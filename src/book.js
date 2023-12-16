@@ -1,4 +1,6 @@
-import { parseHTML } from "./helper";
+import { parseHTML } from "./helpers";
+import { getFromLocalStorage } from "./localstorage";
+
 export class Book {
   constructor({
     isbn,
@@ -9,7 +11,7 @@ export class Book {
     copies,
     cover,
     publishYear,
-    collections,
+    isReserved = false,
     addBookToCollection,
     removeBookFromCollection,
   }) {
@@ -21,37 +23,20 @@ export class Book {
     this.copies = copies;
     this.cover = cover;
     this.publishYear = publishYear;
-    this.collections = collections;
+    this.isReserved = isReserved;
     this.addBookToCollection = addBookToCollection;
     this.removeBookFromCollection = removeBookFromCollection;
-    this.isReserved = false;
-    this.formRef = null;
   }
 
   checkout(formEvent) {
     formEvent.preventDefault();
-    if (!this.isReserved) {
+    if (!this.isReserved && this.copies > 0) {
       const formData = new FormData(formEvent.target);
       const collection = formData.get("collection");
       formEvent.target.reset();
-      this.addBookToCollection(this, collection);
       this.copies--;
-      // update copies of the book
-      const bookEl = document.getElementById(`book-${this.isbn}`);
-      bookEl.querySelector(
-        "[data-copies]"
-      ).textContent = `Copies ${this.copies}`;
       this.isReserved = true;
-      this.formRef.querySelector("select").setAttribute("disabled", "true");
-      this.formRef.querySelector("button").classList.add("opacity-75");
-      const bookCover = bookEl.querySelector('[data-id="book-cover"]');
-      const checkedOutElement = document.createElement("div");
-      checkedOutElement.className =
-        "absolute grid place-content-center top-0 right-0 -translate-y-1/2  w-8 h-8 bg-green-700 text-white rounded-full";
-      const icon = document.createElement("i");
-      icon.className = "fa fa-check";
-      checkedOutElement.append(icon);
-      bookCover.append(checkedOutElement);
+      this.addBookToCollection(this, collection);
     }
   }
 
@@ -59,9 +44,6 @@ export class Book {
     formEvent.preventDefault();
     this.copies++;
     this.removeBookFromCollection(this);
-    this.isReserved = false;
-    this.formRef.querySelector("select").removeAttribute("disabled");
-    this.formRef.querySelector("button").classList.remove("opacity-75");
   }
 
   render() {
@@ -71,7 +53,7 @@ export class Book {
                     class="block p-2 bg-gray-100 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
                   >
                     <option selected>Choose a collection</option>
-                    ${this.collections
+                    ${getFromLocalStorage("collections")
                       .map((collection) => {
                         return `<option value=${collection.name}>${collection.name}</option>`;
                       })
@@ -86,7 +68,6 @@ export class Book {
 
     formHTML.addEventListener("submit", (e) => this.checkout(e));
 
-    this.formRef = formHTML;
     const bookHTML =
       parseHTML(`<div  id=${`book-${this.isbn}`} class="relative flex gap-4 bg-gray-200 px-4 py-6 rounded-md">
               <div class="flex flex-col justify-between shrink-0">
@@ -117,7 +98,6 @@ export class Book {
                 </div>
               </div>
             </div>`);
-
     bookHTML.getElementById("form-swap").replaceWith(formHTML);
     if (this.isReserved) {
       formHTML.querySelector("select").setAttribute("disabled", "true");

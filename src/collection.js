@@ -1,34 +1,27 @@
 export class Collection {
-  constructor({ name, updateDisplayedBooks }) {
+  constructor({
+    name,
+    books = [],
+    id = crypto.randomUUID(),
+    updateDisplayedBooks,
+  }) {
     this.name = name.toUpperCase();
-    this.books = [];
+    this.books = books;
+    this.id = id;
     this.updateDisplayedBooks = updateDisplayedBooks;
-    this.ref = null;
-  }
-  addBook(book) {
-    this.books.push(book);
-    if (this.ref) {
-      const quanitity = this.ref.querySelector("#quantity");
-      if (quanitity) {
-        quanitity.innerText = this.books.length;
-      } else {
-        const quanitity = document.createElement("div");
-        quanitity.className =
-          "absolute grid place-content-center h-8 w-8 right-1 bg-slate-600 text-white rounded-full";
-        quanitity.innerText = this.books.length;
-        this.ref.appendChild(quanitity);
-      }
-    }
   }
 
-  render() {
+  render(isActive) {
     const btn = document.createElement("button");
-    btn.className = `block text-base p-2 w-full text-left border-slate-900 border-2 rounded cursor-pointer`;
+    btn.className = `block text-base p-2 w-full text-left border-slate-900 border-2 rounded cursor-pointer ${
+      isActive ? "bg-slate-900" : ""
+    }`;
     btn.innerText = this.name;
     btn.addEventListener("click", () => {
       this.updateDisplayedBooks(this.name);
     });
     const collectionItem = document.createElement("li");
+    collectionItem.setAttribute("id", this.id);
     collectionItem.className = "relative flex items-center";
     collectionItem.append(btn);
     if (this.books.length > 0) {
@@ -38,8 +31,6 @@ export class Collection {
       quanitity.innerText = this.books.length;
       collectionItem.append(quanitity);
     }
-
-    this.ref = collectionItem;
 
     return collectionItem;
   }

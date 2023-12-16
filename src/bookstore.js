@@ -1,52 +1,77 @@
-import books from "../data.json";
-import { Book } from "./book";
 import { Collection } from "./collection";
 import { Pagination } from "./pagination";
 import { collectionList, booksGrid } from "./domElements";
+import {
+  setItemToLocalStorage,
+  getCollectionsFromLocalStorage,
+  getBooksFromLocalStorage,
+  getCurrentCollectionFromLocalStorage,
+} from "./localstorage";
 
 export class BookStore {
   constructor() {
-    this.collections = [
-      new Collection({
-        name: "GENERAL",
-        updateDisplayedBooks: this.updateDisplayedBooks.bind(this),
-      }),
-    ];
-    this.books = books.map(
-      (book) =>
-        new Book({
-          ...book,
-          collections: this.collections,
-          addBookToCollection: this.addBookToCollection,
-          removeBookFromCollection: this.removeBookFromCollection.bind(this),
-        })
-    );
-    // this will change between the collections.  If null that means no collection is set and show the available books.
-    this.currentCollection = "bookstore";
+    this.books = getBooksFromLocalStorage(this);
+    this.collections = getCollectionsFromLocalStorage(this);
+    this.currentCollection = getCurrentCollectionFromLocalStorage();
     this.pagination = new Pagination({
-      items: this.books,
+      items:
+        this.currentCollection === "bookstore"
+          ? this.books
+          : this.collections
+              .find((c) => c.name === this.currentCollection)
+              .books.map((isbn) => {
+                return this.books.find((book) => book.isbn === isbn);
+              }),
       itemsPerPage: 10,
       onPageChange: this.renderBooksGrid.bind(this),
     });
   }
 
-  addBookToCollection(book, collectionName) {
-    const collection = this.collections.find(
-      (collection) => collection.name === collectionName
+  removeBookFromCollection(book) {
+    const nextBooks = this.books.map((b) => {
+      if (b.isbn === book.isbn) {
+        b.isReserved = false;
+      }
+      return b;
+    });
+    setItemToLocalStorage("books", nextBooks);
+    this.books = nextBooks;
+    const nextCollections = this.collections.map((collection) => {
+      if (collection.name === this.currentCollection) {
+        collection.books = collection.books.filter(
+          (isbn) => isbn !== book.isbn
+        );
+      }
+      return collection;
+    });
+    setItemToLocalStorage("collections", nextCollections);
+    this.collections = nextCollections;
+    const currentBooks = this.pagination.items.filter(
+      (b) => b.isbn !== book.isbn
     );
-    collection.addBook(book);
+    this.pagination.updateItems(currentBooks);
+    this.render();
   }
 
-  removeBookFromCollection(book) {
-    const collection = this.collections.find(
-      (collection) => collection.name === this.currentCollection
-    );
-    collection.books = collection.books.filter(
-      (cBook) => cBook.isbn !== book.isbn
-    );
-    this.updateDisplayedBooks(this.currentCollection);
+  addBookToCollection(book, collectionName) {
+    const nextBooks = this.books.map((b) => {
+      if (b.isbn === book.isbn) {
+        b.isReserved = true;
+      }
+      return b;
+    });
+    setItemToLocalStorage("books", nextBooks);
+    this.books = nextBooks;
+    const nextCollections = this.collections.map((collection) => {
+      if (collection.name === collectionName) {
+        collection.books.push(book.isbn);
+      }
+      return collection;
+    });
+    setItemToLocalStorage("collections", nextCollections);
+    this.collections = nextCollections;
+    this.renderBooksGrid();
     this.renderCollectionList();
-    this.pagination.render();
   }
 
   createCollection(name) {
@@ -56,33 +81,44 @@ export class BookStore {
     });
     this.collections.push(collection);
     this.updateDisplayedBooks(this.currentCollection);
+    setItemToLocalStorage("collections", this.collections);
+    this.renderCollectionList();
   }
 
   updateDisplayedBooksBySearch(search) {
     const books =
       this.currentCollection === "bookstore"
         ? this.books
-        : this.collections.find((c) => c.name === this.currentCollection).books;
+        : this.collections
+            .find((c) => c.name === this.currentCollection)
+            .books.map((isbn) => {
+              return this.books.find((book) => book.isbn === isbn);
+            });
     const newBooks = books.filter((book) =>
       book.title.toLowerCase().includes(search.toLowerCase())
     );
     this.pagination.updateItems(newBooks);
     this.pagination.currentPage = 1;
-    this.renderBooksGrid();
-    this.pagination.render();
+    this.render();
   }
 
   updateDisplayedBooks(collection) {
+    setItemToLocalStorage("currentCollection", collection);
     this.currentCollection = collection;
-    const newItems =
+
+    const books =
       this.currentCollection === "bookstore"
         ? this.books
-        : this.collections.find((c) => c.name === collection).books;
+        : this.collections
+            .find((c) => c.name === collection)
+            .books.map((isbn) => {
+              return this.books.find((book) => book.isbn === isbn);
+            });
 
-    this.pagination.updateItems(newItems);
+    this.pagination.updateItems(books);
     this.pagination.currentPage = 1;
-    this.renderBooksGrid();
-    this.pagination.render();
+
+    this.render();
   }
 
   renderBooksGrid() {
@@ -101,11 +137,23 @@ export class BookStore {
   renderCollectionList() {
     const frag = document.createDocumentFragment();
     this.collections.forEach((collection) => {
-      frag.appendChild(collection.render());
+      frag.appendChild(
+        collection.render(this.currentCollection === collection.name)
+      );
     });
     collectionList.replaceChildren(frag);
   }
+
   render() {
+    if (this.currentCollection === "bookstore") {
+      document
+        .querySelector('[data-update-collection="bookstore"]')
+        .classList.add("bg-slate-900");
+    } else {
+      document
+        .querySelector('[data-update-collection="bookstore"]')
+        .classList.remove("bg-slate-900");
+    }
     this.renderBooksGrid();
     this.renderCollectionList();
     this.pagination.render();

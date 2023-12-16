@@ -4,7 +4,6 @@ import { createCollectionForm } from "./domElements";
 const bookstore = new BookStore();
 
 bookstore.render();
-
 createCollectionForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -13,16 +12,14 @@ createCollectionForm.addEventListener("submit", (e) => {
   if (collection.trim().length !== 0) {
     bookstore.createCollection(collection);
     e.target.reset();
-    bookstore.render();
   }
 });
-
 document
   .querySelector('[data-update-collection="bookstore"]')
-  .addEventListener("click", () => {
+  .addEventListener("click", function () {
     bookstore.updateDisplayedBooks("bookstore");
+    this.classList.add("bg-slate-900");
   });
-
 document.getElementById("search-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);

@@ -22,7 +22,7 @@ export class BookStore {
               .books.map((isbn) => {
                 return this.books.find((book) => book.isbn === isbn);
               }),
-      itemsPerPage: 10,
+      itemsPerPage: 12,
       onPageChange: this.renderBooksGrid.bind(this),
     });
   }
@@ -148,11 +148,11 @@ export class BookStore {
     if (this.currentCollection === "bookstore") {
       document
         .querySelector('[data-update-collection="bookstore"]')
-        .classList.add("bg-slate-900");
+        .classList.add("bg-purple-100", "text-purple-900");
     } else {
       document
         .querySelector('[data-update-collection="bookstore"]')
-        .classList.remove("bg-slate-900");
+        .classList.remove("bg-purple-100", "text-purple-900");
     }
     this.renderBooksGrid();
     this.renderCollectionList();

@@ -18,12 +18,8 @@ document
   .querySelector('[data-update-collection="bookstore"]')
   .addEventListener("click", function () {
     bookstore.updateDisplayedBooks("bookstore");
-    this.classList.add("bg-slate-900");
+    this.classList.add("bg-purple-100", "text-purple-900");
   });
-document.getElementById("search-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const search = formData.get("search");
-  bookstore.updateDisplayedBooksBySearch(search);
-  e.target.reset();
+document.getElementById("search-input").addEventListener("input", (e) => {
+  bookstore.updateDisplayedBooksBySearch(e.target.value);
 });

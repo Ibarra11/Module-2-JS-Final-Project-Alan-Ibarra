@@ -50,7 +50,7 @@ export class Book {
     const formHTML = parseHTML(`<form  class="flex flex-col space-y-2 mt-4">
                   <select
                   name="collection"
-                    class="block p-2 bg-gray-100 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                    class="block p-2 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
                   >
                     <option selected>Choose a collection</option>
                     ${getFromLocalStorage("collections")
@@ -60,7 +60,7 @@ export class Book {
                       .join("\n")}
                   </select>
                   <button
-                  class="bg-purple-500 text-white text-lg py-2 w-full rounded-md"
+                  class="bg-purple-700 text-white text-lg py-2 w-full rounded-md"
                 >
                   Reserve
                   </button>
@@ -69,7 +69,7 @@ export class Book {
     formHTML.addEventListener("submit", (e) => this.checkout(e));
 
     const bookHTML =
-      parseHTML(`<div  id=${`book-${this.isbn}`} class="relative flex gap-4 bg-gray-200 px-4 py-6 rounded-md">
+      parseHTML(`<div  id=${`book-${this.isbn}`} class="relative bg-white shadow flex gap-4 px-4 py-6 rounded-md">
               <div class="flex flex-col justify-between shrink-0">
               <div data-id="book-cover" class="relative">
                 <img
@@ -101,7 +101,8 @@ export class Book {
     bookHTML.getElementById("form-swap").replaceWith(formHTML);
     if (this.isReserved) {
       formHTML.querySelector("select").setAttribute("disabled", "true");
-      formHTML.querySelector("button").classList.add("opacity-75");
+      formHTML.querySelector("button").classList.remove("bg-purple-700");
+      formHTML.querySelector("button").classList.add("bg-slate-300");
       const bookCover = bookHTML.querySelector('[data-id="book-cover"]');
       const checkedOutElement = document.createElement("div");
       checkedOutElement.className =
@@ -113,17 +114,18 @@ export class Book {
     }
     return bookHTML;
   }
+
   renderCollectionView() {
-    const formHTML = parseHTML(`<form    class="flex flex-col space-y-2 mt-4">
+    const formHTML = parseHTML(`<form  class="flex flex-col space-y-2 mt-4">
                   <button
-                  class="bg-purple-500 text-white text-lg py-2 w-full rounded-md"
+                  class=" bg-purple-700 text-white text-lg py-2 w-full rounded-md"
                 >
                   Return
                   </button>
                 </form>`).children[0];
     formHTML.addEventListener("submit", (e) => this.returnBook(e));
     const bookHTML =
-      parseHTML(`<div  id=${`book-${this.isbn}`} class="flex gap-4 bg-gray-200 px-4 py-6 rounded-md"">
+      parseHTML(`<div  id=${`book-${this.isbn}`} class="flex gap-4 bg-white px-4 py-6 rounded-md">
               <div class="flex flex-col gap-2 justify-between shrink-0">
                 <img
                   class="h-36 rounded-md"

@@ -13,8 +13,8 @@ export class Collection {
 
   render(isActive) {
     const btn = document.createElement("button");
-    btn.className = `block text-base p-2 w-full text-left border-slate-900 border-2 rounded cursor-pointer ${
-      isActive ? "bg-slate-900" : ""
+    btn.className = `flex justiofy text-base p-2  w-full text-left  rounded cursor-pointer ${
+      isActive ? "bg-purple-100 text-purple-900" : ""
     }`;
     btn.innerText = this.name;
     btn.addEventListener("click", () => {
@@ -26,8 +26,9 @@ export class Collection {
     collectionItem.append(btn);
     if (this.books.length > 0) {
       const quanitity = document.createElement("div");
-      quanitity.className =
-        "absolute grid place-content-center h-8 w-8 right-1 bg-slate-600 text-white rounded-full";
+      quanitity.className = `absolute grid place-content-center h-8 w-8 right-1 bg-purple-400 text-white rounded ${
+        isActive ? "bg-white" : ""
+      }`;
       quanitity.innerText = this.books.length;
       collectionItem.append(quanitity);
     }

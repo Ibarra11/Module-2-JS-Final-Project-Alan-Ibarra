@@ -11,10 +11,10 @@
     <title>BookStore</title>
   </head>
   <body>
-    <div class="bg-slate-900 h-screen py-14">
-      <main class="h-full max-w-7xl mx-auto flex rounded-2xl overflow-hidden">
+    <div class="h-screen">
+      <main class="h-full flex overflow-hidden">
         <!-- sidebar -->
-        <div class="w-60 bg-sky-800 py-6 flex flex-col space-y-8 text-gray-100">
+        <div class="w-60 bg-white py-6 flex flex-col space-y-8 text-slate-400">
           <h1 class="text-3xl text-center">BookStore</h1>
           <nav class="px-4">
             <ul class="list-none space-y-3">
@@ -36,39 +36,42 @@
                 class="relative rounded overflow-hidden"
               >
                 <input
-                  class="w-full p-1 rounded text-gray-900 pr-9"
+                  class="w-full bg-slate-100 p-1 rounded text-gray-900 pr-9"
                   type="text"
                   name="collection"
                 />
                 <button
-                  class="absolute grid place-content-center right-0 top-0 bottom-0 w-8 bg-green-700"
+                  class="absolute grid place-content-center right-0 top-0 bottom-0 w-8 bg-slate-500 text-white"
                 >
                   <i class="fa fa-plus block"></i>
                 </button>
               </form>
               <!-- coleciton list placeholder -->
-              <ul id="collection-list" class="space-y-2"></ul>
+              <ul id="collection-list" class="space-y-3"></ul>
             </ul>
           </nav>
         </div>
         <!-- Book layout -->
-        <div class="flex-1 flex flex-col gap-4 bg-white py-6 px-4">
+        <div class="flex-1 flex flex-col gap-4 bg-slate-100 py-6 px-4">
           <div class="flex justify-between items-center w-full">
-            <form id="search-form" class="flex gap-2">
+            <div class="relative">
               <input
-                class="bg-gray-300 h-11 px-4 w-[480px] rounded-md"
-                type="search"
-                name="search"
+                class="bg-white h-11 pl-10 pr-4 w-[480px] rounded-md shadow"
+                id="search-input"
+                type="text"
+                placeholder="Search"
               />
-              <button class="bg-gray-300 py-1 w-24 rounded-md">Search</button>
-            </form>
+              <span
+                class="absolute left-2 top-1/2 -translate-y-1/2 text-xl text-slate-400 fa fa-magnifying-glass pointer-events-none"
+              ></span>
+            </div>
 
             <div class="h-9 w-9 rounded-full bg-gray-300"></div>
           </div>
           <!-- book display grid container -->
           <div
             id="books-grid"
-            class="flex-1 grid grid-cols-2 content-start gap-x-4 gap-y-8 overflow-auto pb-4 pr-4"
+            class="flex-1 grid grid-cols-2 2xl:grid-cols-3 content-start gap-x-4 gap-y-8 overflow-auto pb-4 pr-4"
           ></div>
           <!-- pagination -->
           <div

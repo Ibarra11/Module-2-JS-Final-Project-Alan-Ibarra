@@ -47,8 +47,8 @@ export class Pagination {
       btn.className = "border border-gray-700 py-1 px-4 text-lg";
       const nextBtn = document.createElement("button");
       const prevBtn = document.createElement("button");
-      nextBtn.className = "py-2 w-24 text-lg bg-gray-200 rounded";
-      prevBtn.className = "py-2 w-24 text-lg bg-gray-200 rounded";
+      nextBtn.className = "py-2 w-24 text-lg bg-white shadow rounded";
+      prevBtn.className = "py-2 w-24 text-lg bg-white shadow rounded";
       nextBtn.innerText = "Next";
       prevBtn.innerText = "Prev";
       prevBtn.addEventListener("click", () => {

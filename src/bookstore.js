@@ -81,6 +81,7 @@ export class BookStore {
     const nextBooks = this.books.map((b) => {
       if (b.isbn === book.isbn) {
         b.isReserved = false;
+        b.collection = null;
       }
       return b;
     });
@@ -121,8 +122,7 @@ export class BookStore {
     });
     setItemToLocalStorage("collections", nextCollections);
     this.collections = nextCollections;
-    this.renderBooksGrid();
-    this.renderCollectionList();
+    this.render();
   }
 
   deleteCollection() {
@@ -132,6 +132,7 @@ export class BookStore {
     const nextBooks = this.books.map((book) => {
       if (collectionBooks.includes(book.isbn)) {
         book.isReserved = false;
+        book.collection = null;
       }
       return book;
     });
@@ -154,8 +155,7 @@ export class BookStore {
     this.collections.push(collection);
     this.updateDisplayedBooks(this.currentCollection);
     setItemToLocalStorage("collections", this.collections);
-    this.renderCollectionList();
-    this.renderBooksGrid();
+    this.render();
   }
 
   updateDisplayedBooksBySearch(search) {

@@ -27,7 +27,7 @@ export class Collection {
     if (this.books.length > 0) {
       const quanitity = document.createElement("div");
       quanitity.className = `absolute grid place-content-center h-8 w-8 right-1 bg-purple-400 text-white rounded ${
-        isActive ? "bg-white" : ""
+        isActive ? "bg-white text-purple-500" : ""
       }`;
       quanitity.innerText = this.books.length;
       collectionItem.append(quanitity);

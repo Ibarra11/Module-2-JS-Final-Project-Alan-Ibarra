@@ -31,6 +31,9 @@
               <li class="flex justify-between items-center text-xl">
                 Collections
               </li>
+              <p id="collection-error" class="hidden text-red-500">
+                Collection already exist!
+              </p>
               <form
                 id="create-collection"
                 class="relative rounded overflow-hidden"
@@ -52,8 +55,8 @@
           </nav>
         </div>
         <!-- Book layout -->
-        <div class="flex-1 flex flex-col gap-4 bg-slate-100 py-6 px-4">
-          <div class="flex justify-between items-center w-full">
+        <div class="flex-1 flex flex-col gap-4 bg-slate-200 py-6 px-4">
+          <div id="bookstore-actions" class="flex gap-4 items-center w-full">
             <div class="relative">
               <input
                 class="bg-white h-11 pl-10 pr-4 w-[480px] rounded-md shadow"
@@ -65,8 +68,13 @@
                 class="absolute left-2 top-1/2 -translate-y-1/2 text-xl text-slate-400 fa fa-magnifying-glass pointer-events-none"
               ></span>
             </div>
-
-            <div class="h-9 w-9 rounded-full bg-gray-300"></div>
+            <!-- delete collection button -->
+            <button
+              id="delete-collection"
+              class="hidden py-1 px-2 bg-red-500 text-white text-base rounded ml-auto"
+            >
+              Delete Collection
+            </button>
           </div>
           <!-- book display grid container -->
           <div

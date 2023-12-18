@@ -14,6 +14,7 @@ export class Book {
     isReserved = false,
     addBookToCollection,
     removeBookFromCollection,
+    collection = null,
   }) {
     this.isbn = isbn;
     this.title = title;
@@ -26,6 +27,7 @@ export class Book {
     this.isReserved = isReserved;
     this.addBookToCollection = addBookToCollection;
     this.removeBookFromCollection = removeBookFromCollection;
+    this.collection = collection;
   }
 
   checkout(formEvent) {
@@ -91,8 +93,8 @@ export class Book {
     formHTML.addEventListener("submit", (e) => this.checkout(e));
 
     const bookHTML =
-      parseHTML(`<div  id=${`book-${this.isbn}`} class="relative bg-white shadow flex gap-4 px-4 py-6 rounded-md">
-              <div class="flex flex-col justify-between shrink-0">
+      parseHTML(`<div id=${`book-${this.isbn}`} class="relative bg-white shadow flex gap-4 px-4 py-6 rounded-md">
+              <div class="flex flex-col gap-4 shrink-0">
               <div data-id="book-cover" class="relative">
                 <img
                   class="h-36 rounded-md"
@@ -106,25 +108,27 @@ export class Book {
               </div>
 
               <div
-                class=" last:flex-1 flex flex-col justify-between overflow-hidden"
+                class=" flex-1 flex flex-col justify-between overflow-hidden"
               >
-                <div>
+                <div data-id=book-info-${this.isbn} >
                   <h2 class="truncate text-lg">
                     ${this.title}${this.subTitle ? `: ${this.subTitle}` : ""}
                   </h2>
                   <h3 class="truncate text-sm">${this.author.join(",")}</h3>
-                  <time class="text-gray-400 text-sm">2016</time>
+                  <time class="text-gray-400 text-sm">${this.publishYear}</time>
                   <p data-copies>Copies: ${this.copies}</p>
                 </div>
                 <div id="form-swap"></div>
                 </div>
               </div>
-            </div>`);
-    bookHTML.getElementById("form-swap").replaceWith(formHTML);
+            </div>`).children[0];
+    bookHTML.querySelector("#form-swap").replaceWith(formHTML);
     if (this.isReserved) {
+      // disable form and opacity
       formHTML.querySelector("select").setAttribute("disabled", "true");
       formHTML.querySelector("button").classList.remove("bg-purple-700");
       formHTML.querySelector("button").classList.add("bg-slate-300");
+      // add  icon on book cover
       const bookCover = bookHTML.querySelector('[data-id="book-cover"]');
       const checkedOutElement = document.createElement("div");
       checkedOutElement.className =
@@ -133,6 +137,15 @@ export class Book {
       icon.className = "fa fa-check";
       checkedOutElement.append(icon);
       bookCover.append(checkedOutElement);
+      // add what collection the book belongs to
+      const collectionFlag = document.createElement("p");
+      collectionFlag.innerText = this.collection;
+      collectionFlag.className =
+        " mt-2 w-fit bg-purple-200 text-purple-800 top-0 right-0  text-sm rounded p-2";
+
+      bookHTML
+        .querySelector(`[data-id='book-info-${this.isbn}']`)
+        .appendChild(collectionFlag);
     }
     return bookHTML;
   }

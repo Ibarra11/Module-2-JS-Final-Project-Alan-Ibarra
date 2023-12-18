@@ -1,6 +1,14 @@
 import { Collection } from "./collection";
 import { Pagination } from "./pagination";
-import { collectionList, booksGrid } from "./domElements";
+import {
+  collectionList,
+  booksGrid,
+  searchInput,
+  homeBtn,
+  deleteCollectionBtn,
+  createCollection,
+  collectionError,
+} from "./domElements";
 import {
   setItemToLocalStorage,
   getCollectionsFromLocalStorage,
@@ -25,6 +33,48 @@ export class BookStore {
       itemsPerPage: 12,
       onPageChange: this.renderBooksGrid.bind(this),
     });
+  }
+  init() {
+    const bookstore = this;
+    createCollection.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const collectionInput = formData.get("collection");
+      // make sure that it is not an empty string
+      if (
+        collectionInput.trim().length !== 0 &&
+        !this.collections.find(
+          (collection) => collection.name === collectionInput.toUpperCase()
+        )
+      ) {
+        this.createCollection(collectionInput);
+        e.target.reset();
+        if (collectionError.classList.contains("block")) {
+          collectionError.classList.remove("block");
+          collectionError.classList.add("hidden");
+        }
+      } else {
+        collectionError.classList.remove("hidden");
+        collectionError.classList.add("block");
+      }
+    });
+
+    homeBtn.addEventListener("click", function () {
+      bookstore.updateDisplayedBooks("bookstore");
+      this.classList.add("bg-purple-100", "text-purple-900");
+    });
+
+    searchInput.addEventListener("input", (e) => {
+      this.updateDisplayedBooksBySearch(e.target.value);
+    });
+
+    deleteCollectionBtn.addEventListener("click", () => {
+      this.deleteCollection();
+    });
+    if (this.currentCollection !== "bookstore") {
+      deleteCollectionBtn.classList.remove("hidden");
+      deleteCollectionBtn.classList.add("block");
+    }
   }
 
   removeBookFromCollection(book) {
@@ -57,6 +107,7 @@ export class BookStore {
     const nextBooks = this.books.map((b) => {
       if (b.isbn === book.isbn) {
         b.isReserved = true;
+        b.collection = collectionName;
       }
       return b;
     });
@@ -74,6 +125,27 @@ export class BookStore {
     this.renderCollectionList();
   }
 
+  deleteCollection() {
+    const collectionBooks = this.collections.find(
+      (collection) => collection.name === this.currentCollection
+    ).books;
+    const nextBooks = this.books.map((book) => {
+      if (collectionBooks.includes(book.isbn)) {
+        book.isReserved = false;
+      }
+      return book;
+    });
+    this.books = nextBooks;
+    setItemToLocalStorage("books", nextBooks);
+    const nextCollections = this.collections.filter(
+      (collection) => collection.name !== this.currentCollection
+    );
+    setItemToLocalStorage("collections", nextCollections);
+    this.collections = nextCollections;
+    this.currentCollection = "bookstore";
+    this.updateDisplayedBooks(this.currentCollection);
+  }
+
   createCollection(name) {
     const collection = new Collection({
       name,
@@ -83,6 +155,7 @@ export class BookStore {
     this.updateDisplayedBooks(this.currentCollection);
     setItemToLocalStorage("collections", this.collections);
     this.renderCollectionList();
+    this.renderBooksGrid();
   }
 
   updateDisplayedBooksBySearch(search) {
@@ -105,7 +178,6 @@ export class BookStore {
   updateDisplayedBooks(collection) {
     setItemToLocalStorage("currentCollection", collection);
     this.currentCollection = collection;
-
     const books =
       this.currentCollection === "bookstore"
         ? this.books
@@ -118,6 +190,15 @@ export class BookStore {
     this.pagination.updateItems(books);
     this.pagination.currentPage = 1;
 
+    const deleteCollectionBtn = document.getElementById("delete-collection");
+    if (collection !== "bookstore") {
+      deleteCollectionBtn.classList.remove("hidden");
+      deleteCollectionBtn.classList.add("block");
+    } else {
+      deleteCollectionBtn.classList.remove("block");
+      deleteCollectionBtn.classList.add("hidden");
+    }
+    searchInput.value = "";
     this.render();
   }
 

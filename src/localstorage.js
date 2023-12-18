@@ -72,36 +72,3 @@ export function getBooksFromLocalStorage(bookstore) {
   setItemToLocalStorage("books", newBooks);
   return newBooks;
 }
-
-// export function addBookToCollection(book, collectionName) {
-//   const nextBooks = getBooksFromLocalStorage().map((b) => {
-//     if (b.isbn === book.isbn) {
-//       return { ...book, isReserved: true };
-//     }
-//     return b;
-//   });
-//   setItemToLocalStorage("books", nextBooks);
-//   let collection;
-//   const nextCollections = getCollectionsFromLocalStorage().map((c) => {
-//     if (c.name === collectionName) {
-//       collection = { ...c, books: [...c.books, book.isbn] };
-//       return collection;
-//     }
-//   });
-//   setItemToLocalStorage("collections", nextCollections);
-//   updateCollection(collection.id, collection.books.length);
-// }
-
-// function updateCollection(collectionId, numberOfBooks) {
-//   const collectionEL = document.getElementById(collectionId);
-//   const quanitity = collectionEL.querySelector("#quantity");
-//   if (quanitity) {
-//     quanitity.innerText = numberOfBooks;
-//   } else {
-//     const quanitity = document.createElement("div");
-//     quanitity.className =
-//       "absolute grid place-content-center h-8 w-8 right-1 bg-slate-600 text-white rounded-full";
-//     quanitity.innerText = numberOfBooks;
-//     collectionEL.appendChild(quanitity);
-//   }
-// }
